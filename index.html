@@ -388,24 +388,6 @@
   </div>
 
 <script>
-// ---------------------- LOGIN ----------------------
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  let user = document.getElementById('username').value;
-  let pass = document.getElementById('password').value;
-  if ((user === 'admin' && pass === 'password') || (user === 'farmer' && pass === 'password')) {
-    document.getElementById('loginScreen').classList.add('hidden');
-    document.getElementById('adminDashboard').classList.remove('hidden');
-    loadFarms();
-  } else {
-    document.getElementById('loginError').classList.remove('hidden');
-  }
-});
-function logout() {
-  document.getElementById('loginScreen').classList.remove('hidden');
-  document.getElementById('adminDashboard').classList.add('hidden');
-}
-
 // ---------------------- FARMS CRUD ----------------------
 function seedFarms() {
   const demoFarms = [
@@ -4136,3 +4118,4 @@ function deleteFarm(id) {
     </style>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'972abbcc04371061',t:'MTc1NTc4NTYzMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
+
